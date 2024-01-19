@@ -7,8 +7,38 @@
 </head>
 
 <body>
+	   <form id="userForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="First Name" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="Last Name" required><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="Phone Number" required><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="Email ID" required><br>
+
+        <button type="button" onclick="displayResult()">Submit</button>
+    </form>
+
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
+		        function displayResult() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var email = document.getElementById("email").value;
+
+            // Displaying result using alert with spaces as in the provided image
+            var resultMessage = "First Name: " + firstName + "\n" +
+                                "Last Name: " + lastName + "\n" +
+                                "Phone Number: " + phoneNumber + "\n" +
+                                "Email ID: " + email;
+
+            alert(resultMessage);
+        }
 </script>
 
 </body>
